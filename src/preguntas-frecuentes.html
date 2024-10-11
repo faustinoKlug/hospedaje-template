@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es" class="overflow-x-hidden scroll-smooth">
+
+<head>
+    <title>Trevelin - Preguntas frecuentes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link href="./hamburgers.css" rel="stylesheet">
+    <link rel="icon" href="assets/logo2.png">
+</head>
+
+<body class="overflow-x-hidden w-full h-full font-main bg-main text-white">
+    <button class="fixed bottom-[20px] right-[15px] rounded-full p-2 bg-emerald-600 z-20">
+        <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24">
+            <path fill="#ffffff"
+                d="M16.6 14c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1s-.6.8-.8 1c-.1.2-.3.2-.5.1c-.7-.3-1.4-.7-2-1.2c-.5-.5-1-1.1-1.4-1.7c-.1-.2 0-.4.1-.5s.2-.3.4-.4c.1-.1.2-.3.2-.4c.1-.1.1-.3 0-.4S9.7 8.5 9.5 8c-.1-.7-.3-.7-.5-.7h-.5c-.2 0-.5.2-.6.3Q7 8.5 7 9.7c.1.9.4 1.8 1 2.6c1.1 1.6 2.5 2.9 4.2 3.7c.5.2.9.4 1.4.5c.5.2 1 .2 1.6.1c.7-.1 1.3-.6 1.7-1.2c.2-.4.2-.8.1-1.2zm2.5-9.1C15.2 1 8.9 1 5 4.9c-3.2 3.2-3.8 8.1-1.6 12L2 22l5.3-1.4c1.5.8 3.1 1.2 4.7 1.2c5.5 0 9.9-4.4 9.9-9.9c.1-2.6-1-5.1-2.8-7m-2.7 14c-1.3.8-2.8 1.3-4.4 1.3c-1.5 0-2.9-.4-4.2-1.1l-.3-.2l-3.1.8l.8-3l-.2-.3c-2.4-4-1.2-9 2.7-11.5S16.6 3.7 19 7.5c2.4 3.9 1.3 9-2.6 11.4" />
+        </svg>
+    </button>
+
+    <header id="header"
+        class="text-white w-full bg-transparent bg-cover flex flex-col items-center mx-auto py-1 lg:py-4 lg:shadow-none absolute top-0 transition-transform duration-500 ease-in-out z-[9999]">
+        <!-- Navbar Desktop -->
+        <nav class="w-full flex items-center justify-center max-lg:hidden max-w-7xl mx-auto px-4 1280px:px-0">
+            <div class="w-full flex justify-between">
+                <div class="flex items-center">
+                    <img src="assets/logo2.png" height="0" width="110" />
+                </div>
+                <ul class="flex text-white text-lg font-light items-center gap-x-20">
+                    <li class="li-header"><a href="index.html" rel="noopenner"
+                            class="hover:text-zinc-300 transition-all">Inicio</a></li>
+                    <li class="li-header"><a href="index.html#cabanas"
+                            class="cursor-pointer hover:text-zinc-300 transition-all" rel="noopenner">Cabañas</a>
+                    </li>
+                    <li class="li-header"><a href="preguntas-frecuentes.html" class="hover:text-zinc-300 transition-all"
+                            rel="noopenner">Preguntas frecuentes</a></li>
+                    <li class="li-header"><a href="index.html#contacto" class="hover:text-zinc-300 transition-all"
+                            rel="noopenner">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Navbar Mobile -->
+        <nav class="w-full h-[80px] flex justify-around lg:hidden">
+            <div class="self-center">
+                <img src="assets/logo2.png" height="" width="80">
+            </div>
+            <div class="self-center">
+                <div class="flex items-center menu-hamb" onClick="bars()">
+                    <button class="hamburger hamburger--squeeze" type="button" id="boton">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="menu"
+            class="menu w-[90%] bg-main text-white h-full fixed top-0 left-0 z-20 -translate-x-full transition-all ease-in-out duration-300">
+            <ul class="flex flex-col h-[50%] text-white text-xl gap-5 px-5 pt-5 w-full font-semibold">
+                <div class="flex w-full justify-between items-center">
+                    <div class="flex">
+                        <img src="assets/logo2.png" height="0" width="100" />
+                    </div>
+                    <p id="equis" onClick="onEquis()" class="text-5xl cursor-pointer">&Cross;</p>
+                </div>
+                <li><a href="index.html#inicio" onClick="onEquis()" class="italic">INICIO</a></li>
+                <li><a href="index.html#cabanas" onClick="onEquis()" class="italic">CABAÑAS</a></li>
+                <li><a href="preguntas-frecuentes.html" onClick="onEquis()" class="italic">PREGUNTAS FRECUENTES</a></li>
+                <li><a href="index.html#contacto" onClick="onEquis()" class="italic">CONTACTO</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="w-full h-full flex flex-col items-center justify-center">
+
+        <section class="h-[65dvh] bg-hero-faq flex justify-center items-center w-full">
+
+            <article
+                class="flex flex-col justify-center h-full items-center mx-auto max-w-7xl w-full px-2 md:px-4 1280px:px-0 gap-y-2">
+                    <h1
+                        class="font-secondary font-bold leading-[1] text-[40px] sm:text-5xl md:text-6xl xl:text-7xl text-center md:max-w-[700px]">
+                        Preguntas frecuentes
+                    </h1>
+                    <p class="text-zync-100 text-center text-2xl w-full max-w-[600px]">Lorem ipsum dolor sit amet consectetur adipisicing elit penis saret rodot ipseu.</p>
+            </article>
+
+        </section>
+
+        <section class="w-full flex justify-center items-center my-24 lg:my-32">
+            <article
+                class="mx-auto max-w-7xl w-full h-full flex items-center justify-center flex-col gap-y-4 px-1 md:px-4 1280px:px-0">
+
+                <div class="space-y-4 mx-auto w-full">
+
+                    <details class="bg-[#101011] shadow rounded-md p-4 group transition-all w-full">
+                        <summary
+                            class="cursor-pointer font-semibold text-lg text-white flex justify-between items-center p-3 md:text-xl">
+                            <span>¿Cuál es la política de cancelación?</span>
+                            <span class="transform transition-transform group-open:rotate-180">&or;</span>
+                        </summary>
+                        <div class="mt-2 text-white p-3 md:text-lg">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur delectus aperiam a debitis cupiditate mollitia repellat laboriosam distinctio asperiores voluptate voluptates possimus aut quam tempore velit, dolore unde ullam animi voluptatem assumenda? Accusantium possimus mollitia saepe nulla dolore id ipsa.
+                        </div>
+                    </details>
+
+                    <details class="bg-[#101011] shadow rounded-md p-4 group transition-all w-full">
+                        <summary
+                            class="cursor-pointer font-semibold text-lg text-white flex justify-between items-center p-3 md:text-xl">
+                            <span>¿Qué servicios están incluidos en la tarifa del alquiler?</span>
+                            <span class="transform transition-transform group-open:rotate-180">&or;</span>
+                        </summary>
+                        <div class="mt-2 text-white p-3 md:text-lg">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui eos repudiandae consequatur quibusdam animi quidem labore commodi! Officia doloremque omnis nostrum consequatur necessitatibus deleniti modi doloribus totam saepe nesciunt dolorem explicabo voluptas dolorum consectetur, fuga hic quibusdam harum ad error?
+                        </div>
+                    </details>
+
+                    <details class="bg-[#101011] shadow rounded-md p-4 group transition-all w-full">
+                        <summary
+                            class="cursor-pointer font-semibold text-lg text-white flex justify-between items-center p-3 md:text-xl">
+                            <span>¿Hay actividades o excursiones recomendadas cerca de la cabaña?</span>
+                            <span class="transform transition-transform group-open:rotate-180">&or;</span>
+                        </summary>
+                        <div class="mt-2 text-white p-3 md:text-lg">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem dolorem maiores vel veniam perspiciatis provident aspernatur labore natus voluptatum mollitia eum corporis, quidem illo voluptatibus amet praesentium reprehenderit temporibus! Architecto maxime error accusantium repellat tempore laborum odit aspernatur facere? Perferendis.
+                        </div>
+                    </details>
+
+                    <details class="bg-[#101011] shadow rounded-md p-4 group transition-all w-full">
+                        <summary
+                            class="cursor-pointer font-semibold text-lg text-white flex justify-between items-center p-3 md:text-xl">
+                            <span>¿Las cabañas aceptan mascotas?</span>
+                            <span class="transform transition-transform group-open:rotate-180">&or;</span>
+                        </summary>
+                        <div class="mt-2 text-white p-3 md:text-lg">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt, aperiam? Ut culpa illo optio sapiente repudiandae quisquam nam soluta facere, omnis qui, aliquam sequi incidunt quae perferendis doloribus, molestias autem aperiam dolore illum. Assumenda ab voluptas pariatur nobis, sed alias?
+                        </div>
+                    </details>
+
+                    <details class="bg-[#101011] shadow rounded-md p-4 group transition-all w-full">
+                        <summary
+                            class="cursor-pointer font-semibold text-lg text-white flex justify-between items-center p-3 md:text-xl">
+                            <span>¿Qué distancia hay hasta la ciudad más cercana?</span>
+                            <span class="transform transition-transform group-open:rotate-180 ">&or;</span>
+                        </summary>
+                        <div class="mt-2 text-white p-3 md:text-lg">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias tempora aspernatur deleniti quam, dolores laudantium quo voluptate iusto veniam voluptates cum minus cumque quia? Suscipit porro nulla illo eos, odio quas facere quos tempora eligendi veritatis quisquam adipisci accusantium natus!
+                        </div>
+                    </details>
+
+                </div>
+
+            </article>
+        </section>
+
+    </main>
+
+    <footer
+        class="w-full bg-cover bg-top bg-no-repeat flex flex-col items-center justify-center bg-[url(assets/footerimg.png)] h-auto py-8">
+        <div
+            class="px-4 xl:px-0 mx-auto max-w-7xl w-full flex flex-col items-center justify-between mt-4 text-white sm:flex-row">
+            <div class="flex flex-col">
+                <h2 class="text-4xl font-secondary flex items-center">
+                    Seguinos
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 48 48">
+                        <g fill="none" stroke="#ffffff" stroke-linecap="round" stroke-width="4">
+                            <path stroke-linejoin="round" d="M15 26V15a3 3 0 1 1 6 0v11" />
+                            <path stroke-linejoin="round"
+                                d="M39 25v6.5C39 37.851 33.851 43 27.5 43h-1C20.149 43 15 37.851 15 31.5V25" />
+                            <path stroke-linejoin="round"
+                                d="M21 29v-5a3 3 0 1 1 6 0v5m0 0v-5a3 3 0 1 1 6 0v5m0 0v-5a3 3 0 1 1 6 0v5" />
+                            <path
+                                d="M28 15a9.97 9.97 0 0 0-1.959-5.945A9.99 9.99 0 0 0 18 5a9.99 9.99 0 0 0-8.042 4.055A9.97 9.97 0 0 0 8 15" />
+                        </g>
+                    </svg>
+                </h2>
+                <ul class="flex flex-col">
+                    <li>
+                        <a href="" class="flex items-center gap-x-1 text-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                                <path fill="#fff"
+                                    d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3" />
+                            </svg>
+                            @trevelincabanas
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="flex items-center gap-x-1 text-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                                <path fill="#fff"
+                                    d="M12 2.04c-5.5 0-10 4.49-10 10.02c0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89c1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02" />
+                            </svg>
+                            Trevelin Cabañas
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="my-7">
+                <a href="inscripciones.html" class="cursor-pointer">
+                    <button
+                        class="bg-white text-black py-3 px-6 rounded-2xl text-xl items-center flex hover:scale-[105%] transition-all bouncing-element">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 512 512" class="mr-2">
+                            <path fill="#000000"
+                                d="M459.15 269.75a133.197 133.197 0 0 1-55.862 179.975l-42.782 22.541l-10.52 5.533a71.28 71.28 0 0 1-62.966 1.685l-167.077-71.38l15.733-46.676l99.363 19.194l-51.458-97.78l-82.843-157.411l40.357-21.232l82.844 157.457l19.934-10.485l-36.521-69.445l40.335-21.22l36.52 69.445l19.935-10.485l-28.2-53.598l40.358-21.232l28.2 53.598l19.945-10.576l-19.354-36.886l40.346-21.174l19.354 36.885l54.348 103.301zM73.268 146.674a60.03 60.03 0 0 1 42.361-102.459a60.098 60.098 0 0 1 56.58 80.169l10.588 20.013A78.29 78.29 0 0 0 115.708 26a78.233 78.233 0 0 0-5.635 156.262L99.428 162.02a59.7 59.7 0 0 1-26.16-15.346" />
+                        </svg>
+                        HACÉ TU RESERVA
+                    </button>
+                </a>
+            </div>
+            <div class="self-center flex items-center gap-x-3">
+                <img src="assets/logo2.png" height="" width="80" />
+                <p class="text-2xl font-secondary">Cabañas<br> Trevelin</p>
+            </div>
+        </div>
+        <div class="border-t-2 w-[95%] text-white mt-6 pt-2 xl:px-0 mx-auto max-w-7xl flex justify-between">
+            <p class="flex items-center">Desarrollado por
+                <a href="https://faustidev.netlify.app" target="_blank" rel="noopenner"
+                    class="cursor-pointer flex items-center ml-1">
+                    @FaustinoKlug
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                        <path fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M3 12h3m6-9v3M7.8 7.8L5.6 5.6m10.6 2.2l2.2-2.2M7.8 16.2l-2.2 2.2M12 12l9 3l-4 2l-2 4z" />
+                    </svg>
+                </a>
+            </p>
+            <a href="https://www.instagram.com/faustidev/" target="_blank" rel="noopenner">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                    <path fill="#fff"
+                        d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3" />
+                </svg>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            const header = document.getElementById('header');
+            const inicioSection = document.getElementById('inicio');
+            const sectionHeight = inicioSection.offsetHeight;
+
+            if (window.scrollY > sectionHeight * 0.9) {
+                header.classList.add('sticky-header');
+            } else {
+                header.classList.remove('sticky-header');
+            }
+        });
+
+        let banderaButton = true
+        const menu = document.querySelector(".menu");
+        const equis = document.getElementById("equis");
+        let bars = () => {
+            menu.style.transform = "translateX(0%)"
+            document.body.classList.toggle('overflow-hidden');
+            window.scrollTo(0, 0);
+        }
+
+        let onEquis = () => {
+            menu.style.transform = "translateX(-100%)"
+            document.body.classList.remove('overflow-hidden');
+        }
+
+    </script>
+</body>
+
+</html>
